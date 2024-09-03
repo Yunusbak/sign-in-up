@@ -1,0 +1,27 @@
+{% if request.user.is_authenticated %}
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Logged</title>
+    </head>
+    <body>
+    <h1> You are  logged!!!</h1>
+    </body>
+    </html>
+
+{% else %}
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Logged</title>
+    </head>
+    <body>
+    <h1> You are  NOT logged!!!</h1>
+    <h3><a href="{% url 'register' %}">Register</a></h3>
+    <h3><a href="{% url 'login' %}">Login</a></h3>
+    </body>
+    </html>
+
+{% endif %}
